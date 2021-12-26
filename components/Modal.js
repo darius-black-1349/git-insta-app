@@ -5,6 +5,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useRef, useState } from 'react'
 import { CameraIcon } from '@heroicons/react/outline';
 
+
 //firebase
 import { db, storage } from '../firebase'
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from 'firebase/firestore';
@@ -21,6 +22,7 @@ function Modal() {
 
   const [selectedFile, setSelectedFile] = useState(null)
   const [loading, setLoading] = useState(false)
+
 
   const addImageToPost = (e) => {
     const reader = new FileReader()
@@ -39,6 +41,7 @@ function Modal() {
     if(loading) return;
 
     setLoading(true);
+    
 
     const docRef = await addDoc(collection(db, 'posts'), {
 
