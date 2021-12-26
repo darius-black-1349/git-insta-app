@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Header, Feed } from '../components'
+import { Header, Feed, Modal } from '../components'
 
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
       {/* Feed */}
         <Feed/>
       {/* Modal */}
+        <Modal/>
     </div>
   )
 }
