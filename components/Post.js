@@ -50,7 +50,7 @@ function Post({ id, username, userImg, img, caption }) {
     return () => {
       addComments()
     }
-  }, [db, id])
+  }, [id])
 
   useEffect(() => {
     const addLikes = onSnapshot(
@@ -63,11 +63,11 @@ function Post({ id, username, userImg, img, caption }) {
     return () => {
       addLikes()
     }
-  }, [db, id])
+  }, [id])
 
   useEffect(() => 
     setHasLiked(likes.findIndex((like) => like.id === session?.user?.uid) !== -1)
-  , [likes]);
+  , [likes, session?.user?.uid]);
 
   // functions
 
