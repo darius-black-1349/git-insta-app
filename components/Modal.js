@@ -53,7 +53,7 @@ function Modal() {
     }) 
 
 
-    console.log('new doc added with id : ', docRef.id)
+
 
     const imageRef = ref(storage, `posts/${docRef.id}/image`);
 

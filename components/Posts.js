@@ -22,7 +22,7 @@ function Posts() {
     }
   }, [db])
 
-  console.log(posts)
+
 
   return (
     <div>
